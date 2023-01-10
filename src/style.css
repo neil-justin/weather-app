@@ -25,15 +25,27 @@ body {
 
 header {
     display: flex;
-    padding: 1.875rem 8rem;
     justify-content: space-between;
     background-color: var(--black-shade);
+    column-gap: 3.125rem;
+}
+
+header, main {
+    padding: 2.5rem 4.6875rem;
 }
 
 #logo {
     font-size: 2rem;
     text-decoration: none;
     color: white;
+    min-width: max-content;
+}
+
+#search-city-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 0.3125rem;
 }
 
 #search-city-input,
@@ -52,7 +64,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3.125rem;
+    /* padding: 3.125rem; */
 }
 
 #weather-data-container {
