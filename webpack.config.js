@@ -2,7 +2,10 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        index: './src/modules/index.js',
+        helper: './src/modules/helper.js',
+    },
     devtool: 'inline-source-map',
     output: {
         filename: '[name].bundle.js',

@@ -1,4 +1,5 @@
-import './style.css';
+import '../style.css';
+import temperatureConversion from './helper';
 
 async function fetchWeatherData(city) {
     try {
@@ -19,10 +20,11 @@ async function aggregateRequiredData() {
     const weatherData = await fetchWeatherData('cavite');
     const requiredData = {};
     requiredData.name = weatherData.name;
-    requiredData.temp = weatherData.main.temp;
-    requiredData.feels_like = weatherData.main.feels_like;
+    requiredData.temp = temperatureConversion('kelvin', 'celsius', weatherData.main.temp);
+    requiredData.feels_like = temperatureConversion('kelvin', 'celsius', weatherData.main.feels_like);
     requiredData.humidity = weatherData.main.humidity;
     requiredData.description = weatherData.weather[0].description;
+    console.log(requiredData);
     return requiredData;
 }
 
