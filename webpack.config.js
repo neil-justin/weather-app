@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         index: './src/modules/index.js',
         helper: './src/modules/helper.js',
+        domController: './src/modules/dom-controller.js'
     },
     devtool: 'inline-source-map',
     output: {

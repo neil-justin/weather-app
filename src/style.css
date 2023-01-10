@@ -8,6 +8,13 @@
 
 :root {
     --black-shade: #1f1f1f;
+    --lightgray-shade: #ebebeb;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 html,
@@ -37,4 +44,38 @@ header {
 
 #search-city-input:focus {
     outline: none;
+}
+
+main {
+    background-color: var(--lightgray-shade);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.125rem;
+}
+
+#weather-data-container {
+    max-width: 37.5rem;
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    padding: 2.8125rem 6.5625rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    justify-content: center;
+    border-radius: 0.3125rem;
+}
+
+#city-name {
+    font-size: 3.125rem;
+}
+
+#city-name~p {
+    font-size: 1.875rem;
+}
+
+#city-weather-description {
+    text-transform: capitalize;
 }
